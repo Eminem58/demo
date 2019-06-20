@@ -15,6 +15,8 @@ public class AnotionTest {
         Method[] methods = clz.getDeclaredMethods();
         for (Method m : methods) {
             MyAnnotation annotation = m.getDeclaredAnnotation(MyAnnotation.class);
+
+
             System.out.println(annotation.toString());
         }
     }

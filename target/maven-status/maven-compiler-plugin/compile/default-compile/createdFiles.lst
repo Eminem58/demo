@@ -4,7 +4,6 @@ com\example\demo\transaction\ExtTransaction.class
 com\example\demo\transaction\ExtTransactionUtil.class
 com\example\demo\mode\Singleton.class
 com\example\demo\mode\Singleton$SingletonEnum.class
-com\example\demo\utils\DBUtils.class
 com\example\demo\db\DB.class
 com\example\demo\anotation\AnotionTest.class
 com\example\demo\anotation\User.class

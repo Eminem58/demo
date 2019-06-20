@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.demo.DemoApplicationTests" time="1.006" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="F:\easeStar\workspace\learn_wokspace\demo\target\test-classes;F:\easeStar\workspace\learn_wokspace\demo\target\classes;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-starter\2.1.5.RELEASE\spring-boot-starter-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot\2.1.5.RELEASE\spring-boot-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-autoconfigure\2.1.5.RELEASE\spring-boot-autoconfigure-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-starter-logging\2.1.5.RELEASE\spring-boot-starter-logging-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\easeStar\maven\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\easeStar\maven\repository\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar;F:\easeStar\maven\repository\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;F:\easeStar\maven\repository\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;F:\easeStar\maven\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\easeStar\maven\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-starter-test\2.1.5.RELEASE\spring-boot-starter-test-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-test\2.1.5.RELEASE\spring-boot-test-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.1.5.RELEASE\spring-boot-test-autoconfigure-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;F:\easeStar\maven\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;F:\easeStar\maven\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;F:\easeStar\maven\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;F:\easeStar\maven\repository\junit\junit\4.12\junit-4.12.jar;F:\easeStar\maven\repository\org\assertj\assertj-core\3.11.1\assertj-core-3.11.1.jar;F:\easeStar\maven\repository\org\mockito\mockito-core\2.23.4\mockito-core-2.23.4.jar;F:\easeStar\maven\repository\net\bytebuddy\byte-buddy\1.9.12\byte-buddy-1.9.12.jar;F:\easeStar\maven\repository\net\bytebuddy\byte-buddy-agent\1.9.12\byte-buddy-agent-1.9.12.jar;F:\easeStar\maven\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;F:\easeStar\maven\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\easeStar\maven\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;F:\easeStar\maven\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;F:\easeStar\maven\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;F:\easeStar\maven\repository\org\springframework\spring-test\5.1.7.RELEASE\spring-test-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\xmlunit\xmlunit-core\2.6.2\xmlunit-core-2.6.2.jar;F:\easeStar\maven\repository\org\activiti\activiti-spring\6.0.0\activiti-spring-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-engine\6.0.0\activiti-engine-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-bpmn-converter\6.0.0\activiti-bpmn-converter-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-bpmn-model\6.0.0\activiti-bpmn-model-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-process-validation\6.0.0\activiti-process-validation-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-image-generator\6.0.0\activiti-image-generator-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-dmn-api\6.0.0\activiti-dmn-api-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-dmn-model\6.0.0\activiti-dmn-model-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-form-model\6.0.0\activiti-form-model-6.0.0.jar;F:\easeStar\maven\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;F:\easeStar\maven\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;F:\easeStar\maven\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-form-api\6.0.0\activiti-form-api-6.0.0.jar;F:\easeStar\maven\repository\org\apache\commons\commons-email\1.4\commons-email-1.4.jar;F:\easeStar\maven\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;F:\easeStar\maven\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;F:\easeStar\maven\repository\org\mybatis\mybatis\3.4.2\mybatis-3.4.2.jar;F:\easeStar\maven\repository\de\odysseus\juel\juel-api\2.2.7\juel-api-2.2.7.jar;F:\easeStar\maven\repository\de\odysseus\juel\juel-impl\2.2.7\juel-impl-2.2.7.jar;F:\easeStar\maven\repository\de\odysseus\juel\juel-spi\2.2.7\juel-spi-2.2.7.jar;F:\easeStar\maven\repository\joda-time\joda-time\2.10.2\joda-time-2.10.2.jar;F:\easeStar\maven\repository\org\springframework\spring-jdbc\5.1.7.RELEASE\spring-jdbc-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-tx\5.1.7.RELEASE\spring-tx-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;F:\easeStar\maven\repository\commons-dbcp\commons-dbcp\1.4\commons-dbcp-1.4.jar;F:\easeStar\maven\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;F:\easeStar\maven\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;F:\easeStar\maven\repository\org\slf4j\jcl-over-slf4j\1.7.26\jcl-over-slf4j-1.7.26.jar;F:\easeStar\maven\repository\org\springframework\spring-core\5.1.7.RELEASE\spring-core-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-jcl\5.1.7.RELEASE\spring-jcl-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-beans\5.1.7.RELEASE\spring-beans-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-context\5.1.7.RELEASE\spring-context-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-expression\5.1.7.RELEASE\spring-expression-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-aop\5.1.7.RELEASE\spring-aop-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-aspects\5.1.7.RELEASE\spring-aspects-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;F:\easeStar\maven\repository\org\springframework\spring-orm\5.1.7.RELEASE\spring-orm-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\mysql\mysql-connector-java\8.0.12\mysql-connector-java-8.0.12.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="F:\easeStar\jdk\jdk8\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\45984\AppData\Local\Temp\surefire588841790002237087\surefirebooter2643444519956355959.jar C:\Users\45984\AppData\Local\Temp\surefire588841790002237087 2019-06-20T23-04-54_223-jvmRun1 surefire1980276027741568330tmp surefire_07152593591451203483tmp"/>
+    <property name="surefire.test.class.path" value="F:\easeStar\workspace\learn_wokspace\demo\target\test-classes;F:\easeStar\workspace\learn_wokspace\demo\target\classes;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-starter\2.1.5.RELEASE\spring-boot-starter-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot\2.1.5.RELEASE\spring-boot-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-autoconfigure\2.1.5.RELEASE\spring-boot-autoconfigure-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-starter-logging\2.1.5.RELEASE\spring-boot-starter-logging-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\easeStar\maven\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\easeStar\maven\repository\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar;F:\easeStar\maven\repository\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;F:\easeStar\maven\repository\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;F:\easeStar\maven\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\easeStar\maven\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-starter-test\2.1.5.RELEASE\spring-boot-starter-test-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-test\2.1.5.RELEASE\spring-boot-test-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.1.5.RELEASE\spring-boot-test-autoconfigure-2.1.5.RELEASE.jar;F:\easeStar\maven\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;F:\easeStar\maven\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;F:\easeStar\maven\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;F:\easeStar\maven\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;F:\easeStar\maven\repository\junit\junit\4.12\junit-4.12.jar;F:\easeStar\maven\repository\org\assertj\assertj-core\3.11.1\assertj-core-3.11.1.jar;F:\easeStar\maven\repository\org\mockito\mockito-core\2.23.4\mockito-core-2.23.4.jar;F:\easeStar\maven\repository\net\bytebuddy\byte-buddy\1.9.12\byte-buddy-1.9.12.jar;F:\easeStar\maven\repository\net\bytebuddy\byte-buddy-agent\1.9.12\byte-buddy-agent-1.9.12.jar;F:\easeStar\maven\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;F:\easeStar\maven\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\easeStar\maven\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;F:\easeStar\maven\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;F:\easeStar\maven\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;F:\easeStar\maven\repository\org\springframework\spring-test\5.1.7.RELEASE\spring-test-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\xmlunit\xmlunit-core\2.6.2\xmlunit-core-2.6.2.jar;F:\easeStar\maven\repository\org\activiti\activiti-spring\6.0.0\activiti-spring-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-engine\6.0.0\activiti-engine-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-bpmn-converter\6.0.0\activiti-bpmn-converter-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-bpmn-model\6.0.0\activiti-bpmn-model-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-process-validation\6.0.0\activiti-process-validation-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-image-generator\6.0.0\activiti-image-generator-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-dmn-api\6.0.0\activiti-dmn-api-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-dmn-model\6.0.0\activiti-dmn-model-6.0.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-form-model\6.0.0\activiti-form-model-6.0.0.jar;F:\easeStar\maven\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;F:\easeStar\maven\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;F:\easeStar\maven\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\easeStar\maven\repository\org\activiti\activiti-form-api\6.0.0\activiti-form-api-6.0.0.jar;F:\easeStar\maven\repository\org\apache\commons\commons-email\1.4\commons-email-1.4.jar;F:\easeStar\maven\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;F:\easeStar\maven\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;F:\easeStar\maven\repository\org\mybatis\mybatis\3.4.2\mybatis-3.4.2.jar;F:\easeStar\maven\repository\de\odysseus\juel\juel-api\2.2.7\juel-api-2.2.7.jar;F:\easeStar\maven\repository\de\odysseus\juel\juel-impl\2.2.7\juel-impl-2.2.7.jar;F:\easeStar\maven\repository\de\odysseus\juel\juel-spi\2.2.7\juel-spi-2.2.7.jar;F:\easeStar\maven\repository\joda-time\joda-time\2.10.2\joda-time-2.10.2.jar;F:\easeStar\maven\repository\org\springframework\spring-jdbc\5.1.7.RELEASE\spring-jdbc-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-tx\5.1.7.RELEASE\spring-tx-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;F:\easeStar\maven\repository\commons-dbcp\commons-dbcp\1.4\commons-dbcp-1.4.jar;F:\easeStar\maven\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;F:\easeStar\maven\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;F:\easeStar\maven\repository\org\slf4j\jcl-over-slf4j\1.7.26\jcl-over-slf4j-1.7.26.jar;F:\easeStar\maven\repository\org\springframework\spring-core\5.1.7.RELEASE\spring-core-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-jcl\5.1.7.RELEASE\spring-jcl-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-beans\5.1.7.RELEASE\spring-beans-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-context\5.1.7.RELEASE\spring-context-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-expression\5.1.7.RELEASE\spring-expression-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-aop\5.1.7.RELEASE\spring-aop-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\springframework\spring-aspects\5.1.7.RELEASE\spring-aspects-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;F:\easeStar\maven\repository\org\springframework\spring-orm\5.1.7.RELEASE\spring-orm-5.1.7.RELEASE.jar;F:\easeStar\maven\repository\mysql\mysql-connector-java\8.0.12\mysql-connector-java-8.0.12.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\45984"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="F:\easeStar\jdk\jdk8\jre"/>
+    <property name="basedir" value="F:\easeStar\workspace\learn_wokspace\demo"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\45984\AppData\Local\Temp\surefire588841790002237087\surefirebooter2643444519956355959.jar"/>
+    <property name="sun.boot.class.path" value="F:\easeStar\jdk\jdk8\jre\lib\resources.jar;F:\easeStar\jdk\jdk8\jre\lib\rt.jar;F:\easeStar\jdk\jdk8\jre\lib\sunrsasign.jar;F:\easeStar\jdk\jdk8\jre\lib\jsse.jar;F:\easeStar\jdk\jdk8\jre\lib\jce.jar;F:\easeStar\jdk\jdk8\jre\lib\charsets.jar;F:\easeStar\jdk\jdk8\jre\lib\jfr.jar;F:\easeStar\jdk\jdk8\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_152-b16"/>
+    <property name="user.name" value="Eminem"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="F:\easeStar\jdk\jdk8\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="F:\easeStar\maven\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\45984\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_152"/>
+    <property name="user.dir" value="F:\easeStar\workspace\learn_wokspace\demo"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="idea.version2019.1.2" value="true"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="F:\easeStar\jdk\jdk8\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\easeStar\git\Git\cmd;F:\easeStar\mysql\mysql-8.0.16-winx64\bin;C:\Users\45984\AppData\Local\Microsoft\WindowsApps;F:\easeStar\jdk\jdk8\bin; F:\easeStar\jdk\jdk8\jre\bin;F:\easeStar\maven\apache-maven-3.5.4\bin;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.152-b16"/>
+    <property name="java.ext.dirs" value="F:\easeStar\jdk\jdk8\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="contextLoads" classname="com.example.demo.DemoApplicationTests" time="0">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'extTransactionUtil': Unsatisfied dependency expressed through field 'dataSourceTransactionManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+</error>
+    <system-out><![CDATA[2019-06-20 23:05:06.949  INFO 3064 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.DemoApplicationTests], using SpringBootContextLoader
+2019-06-20 23:05:06.950  INFO 3064 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-20 23:05:06.951  INFO 3064 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-06-20 23:05:07.019  INFO 3064 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+2019-06-20 23:05:07.041  INFO 3064 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-20 23:05:07.042  INFO 3064 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1744a475, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@444cc791, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c5c616f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c6c6f24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eb917d0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c6b2dd9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@73437222, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ca93621, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6a48a7f3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3f985a86, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@57a2ed35]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2019-06-20 23:05:07.187  INFO 3064 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests on LAPTOP-F36PRIAQ with PID 3064 (started by Eminem in F:\easeStar\workspace\learn_wokspace\demo)
+2019-06-20 23:05:07.188  INFO 3064 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to default profiles: default
+2019-06-20 23:05:07.443  WARN 3064 --- [           main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'extTransactionUtil': Unsatisfied dependency expressed through field 'dataSourceTransactionManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-06-20 23:05:07.447  INFO 3064 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-20 23:05:07.675 ERROR 3064 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dataSourceTransactionManager in com.example.demo.transaction.ExtTransactionUtil required a bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- Bean method 'transactionManager' in 'DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration' not loaded because @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2019-06-20 23:05:07.723  INFO 3064 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests on LAPTOP-F36PRIAQ with PID 3064 (started by Eminem in F:\easeStar\workspace\learn_wokspace\demo)
+2019-06-20 23:05:07.724  INFO 3064 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to default profiles: default
+2019-06-20 23:05:07.956  WARN 3064 --- [           main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'extTransactionUtil': Unsatisfied dependency expressed through field 'dataSourceTransactionManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-06-20 23:05:07.967  INFO 3064 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-20 23:05:08.078 ERROR 3064 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dataSourceTransactionManager in com.example.demo.transaction.ExtTransactionUtil required a bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- Bean method 'transactionManager' in 'DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration' not loaded because @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' in your configuration.
+
+2019-06-20 23:05:08.080 ERROR 3064 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c5c616f] to prepare test instance [com.example.demo.DemoApplicationTests@7f5b9db]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.2.jar:2.22.2]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'extTransactionUtil': Unsatisfied dependency expressed through field 'dataSourceTransactionManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127) ~[spring-boot-test-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.jdbc.datasource.DataSourceTransactionManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1655) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1214) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 46 common frames omitted
+
+]]></system-out>
+  </testcase>
+</testsuite>

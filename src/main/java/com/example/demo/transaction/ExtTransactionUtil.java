@@ -2,6 +2,7 @@ package com.example.demo.transaction;
 
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Component;
@@ -22,34 +23,26 @@ public class ExtTransactionUtil {
     @Autowired
     private DataSourceTransactionManager dataSourceTransactionManager;
 
-
-
-    @Around("execution(* com.example.demo..*.*(..))")
-    public void around(){
-
-
+    public static void main(String[] args) {
+//        1、定义aop拦截方法
+//        2、检查加了注解
+//        2.1、加环绕通知处理、异常处理
+//        2.1.1、事务utils
     }
 
-
-
-
-
-
-
-
-
+    private TransactionStatus transactionStatus=null;
 
 
     public TransactionStatus begin() {
-        TransactionStatus transactionStatus=dataSourceTransactionManager.getTransaction(new DefaultTransactionAttribute());
+        transactionStatus=dataSourceTransactionManager.getTransaction(new DefaultTransactionAttribute());
         return transactionStatus;
     }
 
-    public void commit(TransactionStatus transactionStatus){
+    public void commit(){
         dataSourceTransactionManager.commit(transactionStatus);
     }
 
-    public void rollback(TransactionStatus transactionStatus){
+    public void rollback(){
         dataSourceTransactionManager.rollback(transactionStatus);
     }
 }

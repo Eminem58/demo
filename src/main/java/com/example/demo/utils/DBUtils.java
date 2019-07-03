@@ -1,6 +1,6 @@
 package com.example.demo.utils;
 
-import com.example.demo.db.DB;
+import com.example.demo.db.Db;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Connection;
@@ -18,7 +18,7 @@ public class DBUtils {
     private Connection connection;
 
     @Autowired
-    private DB db;
+    private Db db;
 
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(db.getUrl(), db.getUsername(), db.getPassword());

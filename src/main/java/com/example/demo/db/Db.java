@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @create 2019.06.14
  */
 @Component
-public class DB {
+public class Db {
     @Value("${spring.datasource.url}")
     private String url;
     @Value("${spring.datasource.username}")

@@ -24,12 +24,18 @@ public class TransactionAop {
 
     @Around("execution(* com.example.demo..*.*(..))")
     public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-//        1、定义aop拦截方法
-//        2、检查加了注解
-//        2.1、加环绕通知处理、异常处理
-//        2.1.1、事务utils
         extTransactionUtil.begin();
         proceedingJoinPoint.proceed();
         extTransactionUtil.commit();
+    }
+
+
+    public void existTransaction(){
+        //        1、定义aop拦截方法
+//        2、检查加了注解
+//        2.1、加环绕通知处理、异常处理
+//        2.1.1、事务utils
+
+
     }
 }

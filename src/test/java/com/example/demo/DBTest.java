@@ -1,12 +1,13 @@
 package com.example.demo;
 
-import com.example.demo.db.DB;
+import com.example.demo.db.Db;
+import com.example.demo.db.DbReport;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.*;
 
 /**
  * 〈测试连接数据库〉
@@ -17,7 +18,18 @@ import java.sql.SQLException;
 public class DBTest extends DemoApplicationTests {
 
     @Autowired
-    private DB db;
+    private Db db;
+    @Autowired
+    private DbReport dbReport;
+
+    @Test
+    public void getClobTest() throws IOException, SQLException {
+        dbReport.getClob();
+    }
+    @Test
+    public void insertClob() throws IOException, SQLException {
+        dbReport.insertClob();
+    }
 
     @Test
     public void connectMysqlTest() throws SQLException {
@@ -29,5 +41,6 @@ public class DBTest extends DemoApplicationTests {
         int res=preparedStatement.executeUpdate();
         System.out.println(res);
     }
+
 
 }

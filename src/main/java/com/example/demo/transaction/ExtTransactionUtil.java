@@ -1,9 +1,7 @@
 package com.example.demo.transaction;
 
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.TransactionStatus;
@@ -16,7 +14,7 @@ import org.springframework.transaction.interceptor.DefaultTransactionAttribute;
  * @create 2019.06.12
  */
 @Component
-@Aspect
+@Scope("prototype")
 public class ExtTransactionUtil {
 
 
@@ -30,7 +28,7 @@ public class ExtTransactionUtil {
 //        2.1.1、事务utils
     }
 
-    private TransactionStatus transactionStatus=null;
+    private TransactionStatus transactionStatus;
 
 
     public TransactionStatus begin() {

@@ -1,7 +1,9 @@
+/*
 package com.example.demo.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.JarURLConnection;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -9,18 +11,22 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+*/
 /**
  * 〈〉
  *
  * @author jinbiao
  * @create 2019/6/21
  * @since 1.0.0
- */
+ *//*
+
 public class ClassUtil {
 
-    /**
+    */
+/**
      * 取得某个接口下所有实现这个接口的类
-     */
+     *//*
+
     public static List<Class> getAllClassByInterface(Class c) {
         List<Class> returnClassList = null;
 
@@ -46,9 +52,11 @@ public class ClassUtil {
         return returnClassList;
     }
 
-    /*
+    */
+/*
      * 取得某一类所在包的所有类名 不含迭代
-     */
+     *//*
+
     public static String[] getPackageAllClassName(String classLocation, String packageName) {
         // 将packageName分解
         String[] packagePathSplit = packageName.split("[.]");
@@ -65,12 +73,14 @@ public class ClassUtil {
         return null;
     }
 
-    /**
+    */
+/**
      * 从包package中获取所有的Class
      *
      * @param pack
      * @return
-     */
+     *//*
+
     public static List<Class<?>> getClasses(String packageName) {
 
         // 第一个class类的集合
@@ -150,14 +160,16 @@ public class ClassUtil {
         return classes;
     }
 
-    /**
+    */
+/**
      * 以文件的形式来获取包下的所有Class
      *
      * @param packageName
      * @param packagePath
      * @param recursive
      * @param classes
-     */
+     *//*
+
     public static void findAndAddClassesInPackageByFile(String packageName, String packagePath, final boolean recursive,
                                                         List<Class<?>> classes) {
         // 获取此包的目录 建立一个File
@@ -193,3 +205,4 @@ public class ClassUtil {
     }
 }
 
+*/

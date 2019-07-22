@@ -16,17 +16,8 @@ import org.springframework.transaction.interceptor.DefaultTransactionAttribute;
 @Component
 @Scope("prototype")
 public class ExtTransactionUtil {
-
-
     @Autowired
     private DataSourceTransactionManager dataSourceTransactionManager;
-
-    public static void main(String[] args) {
-//        1、定义aop拦截方法
-//        2、检查加了注解
-//        2.1、加环绕通知处理、异常处理
-//        2.1.1、事务utils
-    }
 
     private TransactionStatus transactionStatus;
 

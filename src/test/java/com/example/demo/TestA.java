@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.db.Db;
 import org.junit.Test;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,5 +26,6 @@ public class TestA<T> extends DemoApplicationTests {
         System.out.println(list2);
         System.out.println(db);
         System.out.println(db.getUrl());
+        System.out.println(StringUtils.uncapitalize("Ab2dDfg"));
     }
 }

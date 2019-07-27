@@ -1,5 +1,7 @@
 package com.example.demo.spring.ioc;
 
+import java.lang.annotation.*;
+
 /**
  * 〈〉
  *
@@ -7,6 +9,8 @@ package com.example.demo.spring.ioc;
  * @create 2019/6/21
  * @since 1.0.0
  */
-public class ExtService {
-
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface ExtService {
 }

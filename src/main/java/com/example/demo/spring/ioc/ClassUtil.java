@@ -77,7 +77,7 @@ public class ClassUtil {
     public static List<Class<?>> getClasses(String packageName) {
 
         // 第一个class类的集合
-        List<Class<?>> classes = new ArrayList<Class<?>>();
+        List<Class<?>> classes = new ArrayList<>();
         // 是否循环迭代
         boolean recursive = true;
         // 获取包的名字 并进行替换

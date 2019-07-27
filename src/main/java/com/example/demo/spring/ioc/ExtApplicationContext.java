@@ -1,6 +1,14 @@
 package com.example.demo.spring.ioc;
 
 
+import org.apache.commons.lang3.text.WordUtils;
+import org.springframework.util.StringUtils;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  *  [手写springIoc] 
  *  @author 金彪
@@ -16,6 +24,38 @@ public class ExtApplicationContext {
     public ExtApplicationContext(String packageName) {
         this.packageName = packageName;
     }
+
+    public void run() throws InstantiationException, IllegalAccessException {
+        /**
+         * 1.扫包被注解的类
+         * 2.反射初始化类及属性
+         */
+
+        /**
+         * 1.扫包被注解的类
+         */
+        List<Class<?>> classes = ClassUtil.getClasses(packageName);
+        List<Class> classList = new ArrayList<>();
+        for (Class cls : classes) {
+            if (cls.getAnnotation(ExtService.class) != null) {
+                classList.add(cls);
+                continue;
+            }
+        }
+
+        /**
+         * 2.反射组装类及属性
+         */
+        ConcurrentHashMap<String, Object> beanMap = new ConcurrentHashMap<>(16);
+        for (Class cls : classList) {
+            //首字母小写
+            String beanId = StringUtils.uncapitalize(cls.getSimpleName());
+            Object bean = cls.newInstance();
+            beanMap.put(beanId,bean);
+        }
+
+    }
+
 
     // 使用beanID查找对象
     public Object getBean(String beanId) throws Exception {
@@ -54,7 +94,6 @@ public class ExtApplicationContext {
                 continue;
             }
         }
-
     }
 
     // 使用反射机制获取该包下所有的类已经存在bean的注解类
@@ -66,7 +105,7 @@ public class ExtApplicationContext {
         // 2.使用反射技术获取当前包下所有的类
         List<Class<?>> classesByPackageName = ClassUtil.getClasses(packageName);
         // 3.存放类上有bean注入注解
-        List<Class> exisClassesAnnotation = new ArrayList<Class>();
+        List<Class> exisClassesAnnotation = new ArrayList<>();
         // 4.判断该类上属否存在注解
         for (Class classInfo : classesByPackageName) {
             ExtService extService = (ExtService) classInfo.getDeclaredAnnotation(ExtService.class);
@@ -81,7 +120,7 @@ public class ExtApplicationContext {
     // 初始化bean对象
     public ConcurrentHashMap<String, Object> initBean(List<Class> listClassesAnnotation)
             throws InstantiationException, IllegalAccessException {
-        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<String, Object>();
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<String, Object>(16);
         for (Class classInfo : listClassesAnnotation) {
             // 初始化对象
             Object newInstance = classInfo.newInstance();
@@ -94,10 +133,11 @@ public class ExtApplicationContext {
 
     // 首字母转小写
     public static String toLowerCaseFirstOne(String s) {
-        if (Character.isLowerCase(s.charAt(0)))
+        if (Character.isLowerCase(s.charAt(0))) {
             return s;
-        else
+        } else {
             return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
-    }
 
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package com.example.demo.spring.ioc;
+package com.example.demo.spring.ioc.ext;
 
 import java.lang.annotation.*;
 

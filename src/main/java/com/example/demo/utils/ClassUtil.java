@@ -1,9 +1,10 @@
-/*
 package com.example.demo.utils;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.net.JarURLConnection;
+import java.net.URL;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -11,22 +12,18 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-*/
 /**
- * 〈〉
- *
- * @author jinbiao
- * @create 2019/6/21
- * @since 1.0.0
- *//*
-
+ *  []
+ *  @author 金彪
+ *  @date 2019年07月22日
+ *  @version 1.0
+ *  
+ */
 public class ClassUtil {
 
-    */
-/**
+    /**
      * 取得某个接口下所有实现这个接口的类
-     *//*
-
+     */
     public static List<Class> getAllClassByInterface(Class c) {
         List<Class> returnClassList = null;
 
@@ -52,11 +49,9 @@ public class ClassUtil {
         return returnClassList;
     }
 
-    */
-/*
+    /*
      * 取得某一类所在包的所有类名 不含迭代
-     *//*
-
+     */
     public static String[] getPackageAllClassName(String classLocation, String packageName) {
         // 将packageName分解
         String[] packagePathSplit = packageName.split("[.]");
@@ -73,18 +68,16 @@ public class ClassUtil {
         return null;
     }
 
-    */
-/**
+    /**
      * 从包package中获取所有的Class
      *
-     * @param pack
+     * @param packageName
      * @return
-     *//*
-
+     */
     public static List<Class<?>> getClasses(String packageName) {
 
         // 第一个class类的集合
-        List<Class<?>> classes = new ArrayList<Class<?>>();
+        List<Class<?>> classes = new ArrayList<>();
         // 是否循环迭代
         boolean recursive = true;
         // 获取包的名字 并进行替换
@@ -160,16 +153,14 @@ public class ClassUtil {
         return classes;
     }
 
-    */
-/**
+    /**
      * 以文件的形式来获取包下的所有Class
      *
      * @param packageName
      * @param packagePath
      * @param recursive
      * @param classes
-     *//*
-
+     */
     public static void findAndAddClassesInPackageByFile(String packageName, String packagePath, final boolean recursive,
                                                         List<Class<?>> classes) {
         // 获取此包的目录 建立一个File
@@ -181,6 +172,7 @@ public class ClassUtil {
         // 如果存在 就获取包下的所有文件 包括目录
         File[] dirfiles = dir.listFiles(new FileFilter() {
             // 自定义过滤规则 如果可以循环(包含子目录) 或则是以.class结尾的文件(编译好的java类文件)
+            @Override
             public boolean accept(File file) {
                 return (recursive && file.isDirectory()) || (file.getName().endsWith(".class"));
             }
@@ -204,5 +196,3 @@ public class ClassUtil {
         }
     }
 }
-
-*/

@@ -2,8 +2,12 @@ package com.example.demo;
 
 import com.example.demo.db.Db;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.util.StringUtils;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,11 +19,13 @@ import java.util.List;
  *  
  */
 public class TestA<T> extends DemoApplicationTests {
+    @Autowired
+    Db db;
 
     private List list = new ArrayList<>();
-    List<T> list2;
+    private List<T> list2;
 
-    Db db=new Db();
+
     @Test
     public void syso() {
         System.out.println(list);
@@ -27,5 +33,14 @@ public class TestA<T> extends DemoApplicationTests {
         System.out.println(db);
         System.out.println(db.getUrl());
         System.out.println(StringUtils.uncapitalize("Ab2dDfg"));
+        System.out.println("************");
+
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        Field[] declaredFields = this.getClass().getDeclaredFields();
+        for (Field field:declaredFields) {
+            //System.out.println(applicationContext.getBean(field.getName()));
+            System.out.println(field.getName());
+        }
+
     }
 }

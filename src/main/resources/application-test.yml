@@ -1,0 +1,6 @@
+server:
+  port: 2222
+blog:
+  blogId: ${random.int}
+  blogName: spring源码解析
+  blogDesc: ${blog.blogName}描述

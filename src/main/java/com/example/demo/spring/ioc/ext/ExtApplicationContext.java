@@ -1,7 +1,7 @@
-package com.example.demo.spring.ioc;
+package com.example.demo.spring.ioc.ext;
 
 
-import org.apache.commons.lang3.text.WordUtils;
+import com.example.demo.utils.ClassUtil;
 import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
@@ -52,6 +52,12 @@ public class ExtApplicationContext {
             String beanId = StringUtils.uncapitalize(cls.getSimpleName());
             Object bean = cls.newInstance();
             beanMap.put(beanId,bean);
+
+            Field[] fields = cls.getDeclaredFields();
+            for (Field field: fields){
+                field.setAccessible(true);
+                field.set(bean,beanMap.get(field.getName()));
+            }
         }
 
     }

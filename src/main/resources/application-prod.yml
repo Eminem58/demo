@@ -1,0 +1,14 @@
+server:
+  port: 3333
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  http:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+  messages:
+    encoding: UTF-8
+  banner:
+    charset: UTF-8

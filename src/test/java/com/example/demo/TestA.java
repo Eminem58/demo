@@ -37,10 +37,14 @@ public class TestA<T> extends DemoApplicationTests {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         Field[] declaredFields = this.getClass().getDeclaredFields();
-        for (Field field:declaredFields) {
+        for (Field field : declaredFields) {
             //System.out.println(applicationContext.getBean(field.getName()));
             System.out.println(field.getName());
         }
+        System.out.println("************");
 
+        String url = "www";
+        url = new Db().getUrl();
+        System.out.println(url);
     }
 }

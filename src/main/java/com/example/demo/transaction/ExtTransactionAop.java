@@ -22,13 +22,13 @@ public class ExtTransactionAop {
     private ExtTransactionUtil extTransactionUtil;
 
     @AfterThrowing("execution(* com.example.demo..*.*(..))")
-    public void exception(){
+    public void exception() {
         extTransactionUtil.rollback();
     }
 
     @Around("execution(* com.example.demo..*.*(..))")
     public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        if(!existTransaction(proceedingJoinPoint)){
+        if (!existTransaction(proceedingJoinPoint)) {
             return;
         }
         extTransactionUtil.begin();
@@ -39,23 +39,24 @@ public class ExtTransactionAop {
 
     /**
      * [检查是否加了注解]
-     * @author 金彪
-     * @date 2019年07月22日
+     *
      * @param
      * @return
+     * @author 金彪
+     * @date 2019年07月22日
      * @version 1.0
      */
     public Boolean existTransaction(ProceedingJoinPoint proceedingJoinPoint) throws NoSuchMethodException {
-        // 获取方法名称
-        String methodName = proceedingJoinPoint.getSignature().getName();
         // 获取目标对象
         Class<?> classTarget = proceedingJoinPoint.getTarget().getClass();
+        // 获取方法名称
+        String methodName = proceedingJoinPoint.getSignature().getName();
         // 获取方法参数类型
         Class[] parameterTypes = ((MethodSignature) proceedingJoinPoint.getSignature()).getParameterTypes();
         // 获取目标对象方法
         Method method = classTarget.getMethod(methodName, parameterTypes);
         ExtTransaction declaredAnnotation = method.getDeclaredAnnotation(ExtTransaction.class);
-        if(declaredAnnotation==null){
+        if (declaredAnnotation == null) {
             return false;
         }
         return true;

@@ -9,6 +9,7 @@ import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -46,5 +47,11 @@ public class TestA<T> extends DemoApplicationTests {
         String url = "www";
         url = new Db().getUrl();
         System.out.println(url);
+
+        System.out.println("************");
+        HashMap map = new HashMap();
+        map.put("a","1");
+        map.put("b","2");
+        System.out.println(map.toString());
     }
 }

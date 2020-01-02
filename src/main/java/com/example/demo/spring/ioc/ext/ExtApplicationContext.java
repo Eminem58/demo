@@ -25,7 +25,7 @@ public class ExtApplicationContext {
         this.packageName = packageName;
     }
 
-    public void run() throws InstantiationException, IllegalAccessException {
+    public ConcurrentHashMap<String, Object> initBean() throws Exception {
         /**
          * 1.扫包被注解的类
          * 2.反射初始化类及属性
@@ -51,20 +51,25 @@ public class ExtApplicationContext {
             //首字母小写
             String beanId = StringUtils.uncapitalize(cls.getSimpleName());
             Object bean = cls.newInstance();
-            beanMap.put(beanId,bean);
+            beanMap.put(beanId, bean);
 
             Field[] fields = cls.getDeclaredFields();
-            for (Field field: fields){
-                field.setAccessible(true);
-                field.set(bean,beanMap.get(field.getName()));
+            for (Field field : fields) {
+                ExtService annotation = field.getAnnotation(ExtService.class);
+                if (annotation != null) {
+                    field.setAccessible(true);
+                    String name = field.getName();
+                    /*Object fieldBean = this.getBean(name);
+                    field.set(bean, fieldBean);*/
+                }
             }
         }
-
+        return beanMap;
     }
 
 
     // 使用beanID查找对象
-    public Object getBean(String beanId) throws Exception {
+    /*public Object getBean(String beanId) throws Exception {
         // 1.使用反射机制获取该包下所有的类已经存在bean的注解类
         List<Class> listClassesAnnotation = findClassExisService();
         if (listClassesAnnotation == null || listClassesAnnotation.isEmpty()) {
@@ -145,5 +150,5 @@ public class ExtApplicationContext {
             return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
 
         }
-    }
+    }*/
 }

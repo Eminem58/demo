@@ -9,6 +9,7 @@ import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -26,41 +27,6 @@ public class TestA<T> extends DemoApplicationTests {
 
     private List list = new ArrayList<>();
     private List<T> list2;
-
-    enum ComplaintConstant {
-        FULLNESS_TRUE("STA002");
-        private final String code;
-
-        ComplaintConstant(String code) {
-            this.code = code;
-        }
-
-        public String getCode() {
-            return code;
-        }
-
-        @Override
-        public String toString() {
-            return this.code;
-        }
-    }
-
-    @Test
-    public void test() {
-        System.out.println(ComplaintConstant.FULLNESS_TRUE.equals("STA002"));
-        System.out.println(ComplaintConstant.FULLNESS_TRUE.code == "STA002");
-        System.out.println(ComplaintConstant.FULLNESS_TRUE.getCode() == "STA002");
-
-
-        Long a = 123L;
-        System.out.println("123".equals(a));
-        System.out.println("123".equals(a.toString()));
-    }
-
-    @Test
-    public void testPaasSdk() {
-
-    }
 
 
     @Test
@@ -123,5 +89,11 @@ public class TestA<T> extends DemoApplicationTests {
         System.out.println("a:" + sb);
         set.forEach(sb2::append);
         System.out.println("b:" + sb2);
+
+        System.out.println("************");
+        HashMap map = new HashMap();
+        map.put("a","1");
+        map.put("b","2");
+        System.out.println(map.toString());
     }
 }

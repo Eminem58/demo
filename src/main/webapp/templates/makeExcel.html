@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成Excel表</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+<body>
+<button class="btn btn-primary" id="btn_export">生成Excel表</button>
+
+
+
+<script type="text/javascript">
+    //导出excel汇总表
+    $("#btn_export").click(function () {
+        //打开新窗口
+        window.open("/excel/makeExcel");
+    });
+
+</script>
+</body>
+</html>

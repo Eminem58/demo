@@ -1,6 +1,6 @@
-package com.example.demo.mode.observer.impl;
+package com.example.demo.designpattern.observer.impl;
 
-import com.example.demo.mode.observer.Observer;
+import com.example.demo.designpattern.observer.Observer;
 
 /**
  *  [具体的观察者对象] 

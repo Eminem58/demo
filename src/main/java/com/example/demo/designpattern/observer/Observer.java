@@ -1,4 +1,4 @@
-package com.example.demo.mode.observer;
+package com.example.demo.designpattern.observer;
 
 /**
  *  [观察者接口] 

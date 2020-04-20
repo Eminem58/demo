@@ -1,0 +1,45 @@
+
+创建BeanFactory对象:
+  obtainFreshBeanFactory():
+
+
+
+
+
+
+
+#流程
+AbstractApplicationContext.refresh():
+  AbstractApplicationContext.obtainFreshBeanFactory():
+    AbstractRefreshableApplicationContext.refreshBeanFactory():
+      AbstractXmlApplicationContext.loadBeanDefinitions(beanFactory):
+        XmlBeanDefinitionReader.loadBeanDefinitions(resources):
+          XmlBeanDefinitionReader.registerBeanDefinitions():
+            DefaultBeanDefinitionDocumentReader.parseBeanDefinitions():
+              DefaultBeanDefinitionDocumentReader.parseDefaultElement():
+                DefaultBeanDefinitionDocumentReader.processBeanDefinition():
+                  BeanDefinitionParserDelegate.parseBeanDefinitionElement():
+                    BeanMetadataElement.new BeanDefinitionHolder():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

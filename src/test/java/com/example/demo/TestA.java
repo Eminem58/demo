@@ -1,5 +1,7 @@
+/*
 package com.example.demo;
 
+import com.alibaba.fastjson.JSON;
 import com.example.demo.db.Db;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +15,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Stream;
 
+*/
 /**
  *  [] 
  *  @author 金彪
  *  @date 2019年07月19日
  *  @version 1.0
  *  
- */
+ *//*
+
 public class TestA<T> extends DemoApplicationTests {
     @Autowired
     Db db;
@@ -28,6 +33,28 @@ public class TestA<T> extends DemoApplicationTests {
     private List list = new ArrayList<>();
     private List<T> list2;
 
+    @Test
+    public void test(){
+        //System.out.println(Long.parseLong(""));
+
+        List<Person> lisiList = new ArrayList<>();
+        Consumer <Person> consumer  =  x -> {
+            if (x.name.equals("lisi")){
+                lisiList.add(x);
+            }
+        };
+        Stream.of(
+                new Person(21,"zhangsan"),
+                new Person(22,"lisi"),
+                new Person(23,"wangwu"),
+                new Person(24,"wangwu"),
+                new Person(23,"lisi"),
+                new Person(26,"lisi"),
+                new Person(26,"zhangsan")
+        ).forEach(consumer);
+
+        System.out.println(JSON.toJSONString(lisiList));
+    }
 
     @Test
     public void syso() {
@@ -97,3 +124,4 @@ public class TestA<T> extends DemoApplicationTests {
         System.out.println(map.toString());
     }
 }
+*/

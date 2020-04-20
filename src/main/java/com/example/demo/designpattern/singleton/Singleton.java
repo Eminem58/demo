@@ -1,4 +1,4 @@
-package com.example.demo.mode.singleton;
+package com.example.demo.designpattern.singleton;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.example.demo.mode.observer;
+package com.example.demo.designpattern.observer;
 
 /**
  *  [被观察目标接口] 

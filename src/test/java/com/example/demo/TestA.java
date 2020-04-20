@@ -8,14 +8,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
-import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *  [] 
@@ -100,6 +97,46 @@ public class TestA<T> extends DemoApplicationTests {
         String url = "www";
         url = new Db().getUrl();
         System.out.println(url);
+
+        System.out.println("************");
+        Set<Integer> set = new TreeSet<>();
+        System.out.println(set.toString());
+        System.out.println(set.size());
+        set.add(0);
+        set.add(99);
+        set.add(1);
+        set.add(4);
+        set.add(2);
+        System.out.println(set.toString());
+        System.out.println(set.size());
+
+        Set<Integer> set2 = new TreeSet<>();
+        set2.add(1);
+        set2.add(1);
+        set2.add(0);
+        set2.add(99);
+        System.out.println(set.addAll(set2));
+
+
+        Set<Integer> set3 = new TreeSet<>();
+        set3.add(0);
+        set3.add(99);
+        set3.add(1);
+        Set<Integer> set4 = new TreeSet<>();
+        set4.add(4);
+        set4.add(2);
+        set4.add(0);
+        set4.add(99);
+        set4.add(1);
+        System.out.println(set3.addAll(set4));
+
+
+        StringBuffer sb = new StringBuffer();
+        StringBuffer sb2 = new StringBuffer();
+        set.forEach((s) -> sb.append(s));
+        System.out.println("a:" + sb);
+        set.forEach(sb2::append);
+        System.out.println("b:" + sb2);
 
         System.out.println("************");
         HashMap map = new HashMap();

@@ -8,7 +8,7 @@ package com.example.demo.enjoy.concurrent.base;
  * @date 2020/4/19
  */
 public class SleepLock {
-    /*private Object lock = new Object();
+    private Object lock = new Object();
 
     public static void main(String[] args) {
         SleepLock sleepTest = new SleepLock();
@@ -26,7 +26,6 @@ public class SleepLock {
         threadB.start();
     }
     private class ThreadNotSleep extends Thread{
-
         @Override
         public void run() {
             String threadName = Thread.currentThread().getName();
@@ -53,17 +52,5 @@ public class SleepLock {
             }
         }
     }
-    */
-
-
-    private class ThreadSleep extends Thread{
-        @Override
-        public void run() {
-
-        }
-    }
-
-
-
 
 }

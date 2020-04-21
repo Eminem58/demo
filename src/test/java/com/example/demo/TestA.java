@@ -1,8 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.db.Db;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.util.StringUtils;
@@ -11,13 +9,9 @@ import java.lang.reflect.Field;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  *  [] 
@@ -27,9 +21,6 @@ import java.util.TreeSet;
  *  
  */
 public class TestA<T> extends DemoApplicationTests {
-    @Autowired
-    Db db;
-
     private List list = new ArrayList<>();
     private List<T> list2;
 
@@ -86,8 +77,6 @@ public class TestA<T> extends DemoApplicationTests {
     public <T> void syso() {
         System.out.println(list);
         System.out.println(list2);
-        System.out.println(db);
-        System.out.println(db.getUrl());
         System.out.println(StringUtils.uncapitalize("Ab2dDfg"));
         System.out.println("************");
 
@@ -99,9 +88,6 @@ public class TestA<T> extends DemoApplicationTests {
         }
         System.out.println("************");
 
-        String url = "www";
-        url = new Db().getUrl();
-        System.out.println(url);
 
         System.out.println("************");
         Set<Integer> set = new TreeSet<>();

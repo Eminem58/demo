@@ -1,5 +1,8 @@
 package com.example.demo.enjoy.concurrent.base;
 
+import com.example.demo.utils.SleepTools;
+import lombok.SneakyThrows;
+
 /**
  * [演示Join（）方法的使用]
  *
@@ -8,53 +11,37 @@ package com.example.demo.enjoy.concurrent.base;
  * @date 2020/4/19
  */
 public class UseJoin {
-    static class Goddess implements Runnable {
+    private static class Athread implements Runnable{
         private Thread thread;
-
-        public Goddess(Thread thread) {
+        public Athread(Thread thread){
             this.thread = thread;
         }
-
-        public Goddess() {
-        }
+        @SneakyThrows
         @Override
         public void run() {
-            System.out.println("Goddess开始排队打饭.....");
-            try {
-                if(thread!=null) thread.join();
-            } catch (InterruptedException e) {
+            System.out.println(Thread.currentThread().getName()+"开始排队打饭");
+            if(thread!=null){
+                thread.join();
             }
-            SleepTools.second(2);//休眠2秒
-            System.out.println(Thread.currentThread().getName()
-                    + " Goddess打饭完成.");
+            System.out.println(Thread.currentThread().getName()+"打饭完成");
         }
     }
-
-    static class GoddessBoyfriend implements Runnable {
-
+    private static class Bthread implements Runnable{
         @Override
         public void run() {
-            SleepTools.second(2);//休眠2秒
-            System.out.println("GoddessBoyfriend开始排队打饭.....");
-            System.out.println(Thread.currentThread().getName()
-                    + " GoddessBoyfriend打饭完成.");
+            System.out.println(Thread.currentThread().getName()+"开始排队打饭");
+            System.out.println(Thread.currentThread().getName()+"打饭完成");
         }
     }
-
-    public static void main(String[] args) throws Exception {
-
-        Thread lison = Thread.currentThread();
-        GoddessBoyfriend goddessBoyfriend = new GoddessBoyfriend();
-        Thread gbf = new Thread(goddessBoyfriend);
-        Goddess goddess = new Goddess(gbf);
-        //Goddess goddess = new Goddess();
-        Thread g = new Thread(goddess);
-        g.start();
-        gbf.start();
-        System.out.println("lison开始排队打饭.....");
-        g.join();
-        //让主线程休眠2秒
+    @SneakyThrows
+    public static void main(String[] args) {
+        Thread bthread = new Thread(new Bthread(),"bthread线程");
+        Thread athread = new Thread(new Athread(bthread),"athread线程");
+        athread.start();
+        bthread.start();
+        System.out.println("main线程开始排队打饭");
+        athread.join();
         SleepTools.second(2);
-        System.out.println(Thread.currentThread().getName() + " lison打饭完成.");
+        System.out.println("main线程打饭完成");
     }
 }

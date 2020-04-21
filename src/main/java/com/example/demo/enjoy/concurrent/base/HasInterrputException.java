@@ -9,36 +9,28 @@ package com.example.demo.enjoy.concurrent.base;
  */
 public class HasInterrputException {
     private static class UseThread extends Thread{
-        public UseThread(String name) {
+        public UseThread(String name){
             super(name);
         }
         @Override
         public void run() {
-            while(!isInterrupted()) {
+            while (!isInterrupted()){
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
-                    System.out.println(Thread.currentThread().getName()
-                            +" in InterruptedException interrupt flag is "
-                            +isInterrupted());
-                    //资源释放
+                    System.out.println(Thread.currentThread().getName()+" interruptFlag:"+isInterrupted());
                     interrupt();
                     e.printStackTrace();
                 }
-                System.out.println(Thread.currentThread().getName()
-                        + " I am extends Thread.");
+                System.out.println("useThread is running");
             }
-            System.out.println(Thread.currentThread().getName()
-                    +" interrupt flag is "+isInterrupted());
+            System.out.println(Thread.currentThread().getName()+" interruptFlag:"+isInterrupted());
         }
     }
-
     public static void main(String[] args) throws InterruptedException {
-        Thread endThread = new UseThread("HasInterrputEx");
-        endThread.start();
+        Thread useThread = new UseThread("useThread");
+        useThread.start();
         Thread.sleep(500);
-        endThread.interrupt();
-
-
+        useThread.interrupt();
     }
 }

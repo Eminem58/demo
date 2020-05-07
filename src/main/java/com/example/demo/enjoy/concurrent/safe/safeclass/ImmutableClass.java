@@ -10,7 +10,7 @@ package com.example.demo.enjoy.concurrent.safe.safeclass;
 public class ImmutableClass {
     private final int a;
     private final int b;
-    private final UserVo user = new UserVo();//不安全
+    private final UserVo user = new UserVo(2);//不安全
 
     public int getA() {
         return a;

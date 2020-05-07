@@ -9,9 +9,11 @@ import lombok.Data;
  * @version 1.0
  * @date 2020/5/6
  */
-@Data
 public class UserVo {
     private int age;
+
+    public UserVo() {
+    }
 
     public UserVo(int age) {
         this.age = age;

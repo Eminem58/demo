@@ -17,6 +17,9 @@ import java.util.concurrent.locks.ReentrantLock;
 @Data
 @AllArgsConstructor
 public class UserAccount {
+    /**
+     * 可以用id区分加锁对象，或者对象hashCode
+     */
     private Long accountId;
     private String accountName;
     private BigDecimal money;

@@ -16,13 +16,13 @@ Welcome<br/>
 
     //判断当前浏览器是否支持WebSocket
     if('WebSocket' in window){
-        websocket = new WebSocket("ws://localhost:2222/socket/lily");
+        websocket = new WebSocket("ws://localhost:2222/socket/lucy");
     }else{
         alert('Not support websocket')
-    };
+    }
 
     //连接发生错误的回调方法
-    websocket.onerror = function(event){
+    websocket.onerror = function(){
         setMessageInnerHTML("error");
     };
 

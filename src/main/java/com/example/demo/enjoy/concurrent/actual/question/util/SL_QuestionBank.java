@@ -1,5 +1,7 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.util;
 
+import com.example.demo.enjoy.concurrent.actual.question.constant.Constant;
+import com.example.demo.enjoy.concurrent.actual.question.vo.QuestionInDBVo;
 import lombok.SneakyThrows;
 
 import java.util.Random;

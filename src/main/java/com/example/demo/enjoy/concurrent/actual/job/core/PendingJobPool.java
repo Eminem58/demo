@@ -1,7 +1,8 @@
-package com.example.demo.enjoy.concurrent.actual.job;
+package com.example.demo.enjoy.concurrent.actual.job.core;
 
+import com.example.demo.enjoy.concurrent.actual.job.vo.JobInfo;
+import com.example.demo.enjoy.concurrent.actual.job.vo.TaskResult;
 import lombok.SneakyThrows;
-import org.apache.poi.ss.formula.functions.T;
 
 import java.util.List;
 import java.util.concurrent.*;

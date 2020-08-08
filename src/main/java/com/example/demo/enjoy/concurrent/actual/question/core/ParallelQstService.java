@@ -1,4 +1,9 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.core;
+
+import com.example.demo.enjoy.concurrent.actual.question.util.SL_QuestionBank;
+import com.example.demo.enjoy.concurrent.actual.question.vo.QuestionInCacheVo;
+import com.example.demo.enjoy.concurrent.actual.question.vo.QuestionInDBVo;
+import com.example.demo.enjoy.concurrent.actual.question.vo.TaskResultVo;
 
 import java.util.concurrent.*;
 

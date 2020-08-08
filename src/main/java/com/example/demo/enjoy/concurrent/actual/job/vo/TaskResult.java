@@ -1,4 +1,4 @@
-package com.example.demo.enjoy.concurrent.actual.job;
+package com.example.demo.enjoy.concurrent.actual.job.vo;
 
 /**
  * []

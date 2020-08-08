@@ -1,23 +1,29 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.test;
+
+import com.example.demo.enjoy.concurrent.actual.question.constant.Constant;
+import com.example.demo.enjoy.concurrent.actual.question.core.ProduceDocService;
+import com.example.demo.enjoy.concurrent.actual.question.util.CreatePendingDocs;
+import com.example.demo.enjoy.concurrent.actual.question.util.SL_QuestionBank;
+import com.example.demo.enjoy.concurrent.actual.question.vo.SrcDocVo;
 
 import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * [服务化，异步化]
+ * [调整线程池的大小]
  *
  * @author 金彪
  * @version 1.0
  * @date 2020/5/8
  */
-public class RpcServiceWebV1 {
+public class RpcServiceWebV3 {
     /*处理文档生成的线程池*/
     private static ExecutorService docMakeService
-            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*2);
+            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*4);
 
     /*处理文档上传的线程池*/
     private static ExecutorService docUploadService
-            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*2);
+            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*4*3);
 
     private static CompletionService<String> docCompletingServcie
             = new ExecutorCompletionService<String>(docMakeService);
@@ -59,7 +65,7 @@ public class RpcServiceWebV1 {
         @Override
         public String call() throws Exception {
             long start = System.currentTimeMillis();
-            String result = ProduceDocService.makeDoc(pendingDocVo);
+            String result = ProduceDocService.makeDocAsyn(pendingDocVo);
             System.out.println("文档"+result+"生成耗时："
                     +(System.currentTimeMillis()-start)+"ms");
             return result;
@@ -67,7 +73,7 @@ public class RpcServiceWebV1 {
     }
 
     //上传文档的工作任务
-    private static class UploadTask implements Callable<String> {
+    private static class UploadTask implements Callable<String>{
 
         private String fileName;
 

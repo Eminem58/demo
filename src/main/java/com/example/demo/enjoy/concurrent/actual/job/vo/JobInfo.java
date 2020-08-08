@@ -1,4 +1,6 @@
-package com.example.demo.enjoy.concurrent.actual.job;
+package com.example.demo.enjoy.concurrent.actual.job.vo;
+
+import com.example.demo.enjoy.concurrent.actual.job.core.ITaskProcesser;
 
 import java.util.LinkedList;
 import java.util.List;

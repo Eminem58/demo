@@ -1,4 +1,4 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.vo;
 
 /**
  * [题目实体类]

@@ -1,23 +1,26 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.test;
+
+import com.example.demo.enjoy.concurrent.actual.question.constant.Constant;
+import com.example.demo.enjoy.concurrent.actual.question.core.ProduceDocService;
+import com.example.demo.enjoy.concurrent.actual.question.util.CreatePendingDocs;
+import com.example.demo.enjoy.concurrent.actual.question.util.SL_QuestionBank;
+import com.example.demo.enjoy.concurrent.actual.question.vo.SrcDocVo;
 
 import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * [调整线程池的大小]
- *
- * @author 金彪
- * @version 1.0
- * @date 2020/5/8
+ *类说明：题目的并行化，并引入缓存
  */
-public class RpcServiceWebV3 {
+public class RpcServiceWebV2 {
+
     /*处理文档生成的线程池*/
     private static ExecutorService docMakeService
-            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*4);
+            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*2);
 
     /*处理文档上传的线程池*/
     private static ExecutorService docUploadService
-            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*4*3);
+            = Executors.newFixedThreadPool(Constant.THREAD_COUNT*2);
 
     private static CompletionService<String> docCompletingServcie
             = new ExecutorCompletionService<String>(docMakeService);
@@ -25,9 +28,9 @@ public class RpcServiceWebV3 {
             = new ExecutorCompletionService<String>(docUploadService);
 
 
-    public static void main(String[] args)
+	public static void main(String[] args)
             throws ExecutionException, InterruptedException {
-        int docCount = 30;
+		int docCount = 60;
         System.out.println("题库开始初始化...........");
         SL_QuestionBank.initBank();
         System.out.println("题库初始化完成。");

@@ -1,4 +1,6 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.core;
+
+import com.example.demo.enjoy.concurrent.actual.question.util.SL_QuestionBank;
 
 /**
  * [模拟解析题目文本，下载图片等操作，返回解析后的文本]

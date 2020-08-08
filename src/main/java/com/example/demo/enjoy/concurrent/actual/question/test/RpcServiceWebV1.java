@@ -1,16 +1,22 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.test;
+
+import com.example.demo.enjoy.concurrent.actual.question.constant.Constant;
+import com.example.demo.enjoy.concurrent.actual.question.core.ProduceDocService;
+import com.example.demo.enjoy.concurrent.actual.question.util.CreatePendingDocs;
+import com.example.demo.enjoy.concurrent.actual.question.util.SL_QuestionBank;
+import com.example.demo.enjoy.concurrent.actual.question.vo.SrcDocVo;
 
 import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * [题目的并行化，并引入缓存]
+ * [服务化，异步化]
  *
  * @author 金彪
  * @version 1.0
  * @date 2020/5/8
  */
-public class RpcServiceWebV2 {
+public class RpcServiceWebV1 {
     /*处理文档生成的线程池*/
     private static ExecutorService docMakeService
             = Executors.newFixedThreadPool(Constant.THREAD_COUNT*2);
@@ -59,7 +65,7 @@ public class RpcServiceWebV2 {
         @Override
         public String call() throws Exception {
             long start = System.currentTimeMillis();
-            String result = ProduceDocService.makeDocAsyn(pendingDocVo);
+            String result = ProduceDocService.makeDoc(pendingDocVo);
             System.out.println("文档"+result+"生成耗时："
                     +(System.currentTimeMillis()-start)+"ms");
             return result;

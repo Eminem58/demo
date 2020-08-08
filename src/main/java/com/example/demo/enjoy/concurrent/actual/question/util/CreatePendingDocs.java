@@ -1,4 +1,7 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.util;
+
+import com.example.demo.enjoy.concurrent.actual.question.constant.Constant;
+import com.example.demo.enjoy.concurrent.actual.question.vo.SrcDocVo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -27,8 +30,5 @@ public class CreatePendingDocs {
         }
         return docVoList;
     }
-
-    ;
-
 
 }

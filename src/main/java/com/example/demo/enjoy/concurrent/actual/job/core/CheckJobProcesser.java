@@ -1,5 +1,6 @@
-package com.example.demo.enjoy.concurrent.actual.job;
+package com.example.demo.enjoy.concurrent.actual.job.core;
 
+import com.example.demo.enjoy.concurrent.actual.job.vo.JobInfo;
 import com.example.demo.enjoy.concurrent.bq.ItemVo;
 import lombok.SneakyThrows;
 

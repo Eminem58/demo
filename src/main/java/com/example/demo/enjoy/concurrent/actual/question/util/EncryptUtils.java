@@ -1,4 +1,4 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.util;
 
 import org.apache.commons.lang3.StringUtils;
 

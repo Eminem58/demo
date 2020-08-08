@@ -1,5 +1,8 @@
-package com.example.demo.enjoy.concurrent.actual.job;
+package com.example.demo.enjoy.concurrent.actual.job.test;
 
+import com.example.demo.enjoy.concurrent.actual.job.core.ITaskProcesser;
+import com.example.demo.enjoy.concurrent.actual.job.vo.TaskResult;
+import com.example.demo.enjoy.concurrent.actual.job.vo.TaskResultType;
 import lombok.SneakyThrows;
 
 import java.util.Random;

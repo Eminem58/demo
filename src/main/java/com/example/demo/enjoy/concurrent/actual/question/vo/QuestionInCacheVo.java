@@ -1,4 +1,4 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.vo;
 
 /**
  * [题目保存在缓存中的实体]

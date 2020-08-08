@@ -1,4 +1,4 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.vo;
 
 import java.util.concurrent.Future;
 

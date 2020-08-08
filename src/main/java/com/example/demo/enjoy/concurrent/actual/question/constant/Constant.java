@@ -1,7 +1,7 @@
-package com.example.demo.enjoy.concurrent.actual.question;
+package com.example.demo.enjoy.concurrent.actual.question.constant;
 
 /**
- * []
+ * [系统常量类]
  *
  * @author 金彪
  * @version 1.0

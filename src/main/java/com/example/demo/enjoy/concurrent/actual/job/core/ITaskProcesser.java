@@ -1,4 +1,6 @@
-package com.example.demo.enjoy.concurrent.actual.job;
+package com.example.demo.enjoy.concurrent.actual.job.core;
+
+import com.example.demo.enjoy.concurrent.actual.job.vo.TaskResult;
 
 /**
  * 实现可查询进度的并发任务执行框架
